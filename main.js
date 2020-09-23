@@ -70,7 +70,6 @@ app.delete('/users/:id', async (req, res) => {
 });
 
 app.put('/users/:id', async (req, res) => {
-
   let user;
   let select = `SELECT * FROM users
   WHERE users.id = ${req.params.id};`;
@@ -82,7 +81,6 @@ app.put('/users/:id', async (req, res) => {
     console.log(user);
 
     if (req.body.pseudo) user.pseudo = req.body.pseudo;
-    console.log(req.body);
     if (req.body.email) user.email = req.body.email;
     if (req.body.firstname) user.firstname = req.body.firstname;
     if (req.body.lastname) user.lastname = req.body.lastname;
